@@ -95,7 +95,7 @@ public class TodoHandler {
 	public StringBuilder viewTodo() {
 		StringBuilder sb = new StringBuilder();
 		for(Todo item : this.getTodoList()) {
-			sb.append(String.format("Todo %d : %s \n", this.getTodoList().indexOf(item),item.toString()));
+			sb.append(String.format("Todo %d : %s \n", this.todoList.indexOf(item),item.toString()));
 		}
 		return sb;
 	}
