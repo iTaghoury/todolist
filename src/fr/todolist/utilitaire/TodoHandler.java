@@ -52,6 +52,7 @@ public class TodoHandler {
 	/**
 	 * Ajoute une tache à la todo list
 	 * @param todo la tache à ajouter
+	 * @return le message d'ajout
 	 */
 	public String addTodo(Todo todo) {
 		String message = String.format("Ajout nouvelle tache : %s\n", todo.toString());
