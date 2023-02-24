@@ -9,8 +9,8 @@ public class App {
 	
 	
 	/**
-	 * 
-	 * @param menu
+	 * Boucle de l'application
+	 * @param menu : le menu à afficher
 	 */
 	public static void appLoop(Menu menu) {
 		
