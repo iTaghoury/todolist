@@ -7,6 +7,24 @@ import fr.todolist.utilitaire.TodoHandler;
 
 public class App {
 	
+	
+	/**
+	 * 
+	 * @param menu
+	 */
+	public static void appLoop(Menu menu) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		int choix = 0;	
+		do {
+			System.out.println(menu.afficherMenu());
+			choix = sc.nextInt();
+			handleMenu(choix, sc);
+		} while(choix != 5);
+	}
+	
+	
 	/**
 	 * Gère les interactions avec la console
 	 * @param choix : l'option du menu choisie

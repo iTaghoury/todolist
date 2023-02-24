@@ -1,7 +1,5 @@
 package fr.todolist.domain;
 
-import java.util.Scanner;
-
 import fr.todolist.model.Menu;
 
 public class Main {
@@ -20,17 +18,11 @@ public class Main {
 			 };
 		
 		Menu menu = new Menu(items);
-		Scanner sc = new Scanner(System.in);
 		
 		
 		// Boucle App
 		
-		int choix = 0;	
-		do {
-			System.out.println(menu.afficherMenu());
-			choix = menu.choixMenu(sc);
-			App.handleMenu(choix, sc);
-		} while(choix != 5) ;
+		App.appLoop(menu);
 	}
 
 }
