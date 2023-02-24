@@ -51,6 +51,10 @@ public class Todo {
 	 * Méthodes
 	 */
 	
+	/**
+	 * Renvoie les données contenues dans l'instance sous forme de String
+	 * @return une chaine de caractères décrivant l'instance
+	 */
 	@Override
 	public String toString() {
 		return "Todo [urgence=" + urgence + ", titre=" + titre + ", description=" + description + "]";

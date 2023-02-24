@@ -8,6 +8,8 @@ public class Main {
 
 	public static void main(String[] args) {
 		
+		// Initialisation
+		
 		String[] items = 
 			{
 			 "1) Ajouter un Todo", 

@@ -7,13 +7,18 @@ import fr.todolist.utilitaire.TodoHandler;
 
 public class App {
 	
+	/**
+	 * Gère les interactions avec la console
+	 * @param choix : l'option du menu choisie
+	 * @param sc : le scanner permettant de récupérer les inputs
+	 */
 	public static void handleMenu(int choix, Scanner sc) {
 		
 		TodoHandler th = TodoHandler.getTodoHandler();
 		sc.nextLine();
 		
 		switch(choix) {
-			case 1:
+			case 1: // Option ajout d'une tache, demande un titre, une description et un niveau d'urgence
 				
 				System.out.print("Entrez le titre : ");
 				String titre = sc.nextLine();
@@ -28,35 +33,39 @@ public class App {
 				
 				System.out.println(th.addTodo(nouvelleTache));
 				break;
-			case 2:
+			case 2: // Option affichage de toutes les taches
 				
 				System.out.println(String.format("Todo List : \n %s", th.viewTodo()));
 				break;
-			case 3:
+			case 3: // Option suppression d'une tache selon son index dans la todolist
 				
 				System.out.println("Entrez l'index de la tache a supprimer : ");
 				int index = sc.nextInt();
 				
 				System.out.println(th.removeTodo(index));
 				break;
-			case 4:
+			case 4: // Option suppression de la dernière tâche de la liste
 				
 				System.out.println(th.removeLastTodo());;
 				break;
-			default:
+			default: // Option quitter ou invalide
 				break;
 		}
 	}
 	
+	
+	/**
+	 * Gère l'input du niveau d'urgence en vérifiant que l'input est correcte
+	 * @param sc : le scanner permettant l'input
+	 * @return le niveau d'urgence
+	 */
 	public static Urgence inputUrgence(Scanner sc) {
 		
-		Urgence u = null;
 		int choixUrgence = 0;
 		do {
 			choixUrgence = sc.nextInt();
 		} while(choixUrgence < 1 || choixUrgence > 3);
 		
-		u = Urgence.values()[choixUrgence-1];
-		return u;
+		return Urgence.values()[choixUrgence-1];
 	}
 }
