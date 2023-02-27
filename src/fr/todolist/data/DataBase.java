@@ -13,10 +13,10 @@ public class DataBase implements AutoCloseable {
     private static final String URL = "jdbc:mysql://localhost:3306/todoList";
     //endregion
 
-    private String ADD_QUERY = "INSERT INTO tasks (titre, descript, urgence) VALUE (?, ?, ?)";
-    private String SELECT_QUERY = "SELECT * FROM tasks";
-    private String DELETE_QUERY = "DELETE tasks.* FROM tasks WHERE idTask = ?";
-    private String SELECT_DESC_QUERY = "SELECT * FROM tasks ORDER BY idTask DESC";
+    private final String ADD_QUERY = "INSERT INTO tasks (titre, descript, urgence) VALUE (?, ?, ?)";
+    private final String SELECT_QUERY = "SELECT * FROM tasks";
+    private final String DELETE_QUERY = "DELETE tasks.* FROM tasks WHERE idTask = ?";
+    private final String SELECT_DESC_QUERY = "SELECT * FROM tasks ORDER BY idTask DESC";
     private Connection connection;
     private static DataBase instance;
     static {
