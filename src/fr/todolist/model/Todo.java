@@ -16,7 +16,6 @@ public class Todo {
 
 
 	public Todo(Urgence urgence, String titre, String description) {
-		super();
 		this.urgence = urgence;
 		this.titre = titre;
 		this.description = description;

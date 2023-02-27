@@ -6,4 +6,5 @@
  *
  */
 module todolist {
+    requires java.sql;
 }
